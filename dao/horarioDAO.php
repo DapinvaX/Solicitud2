@@ -17,7 +17,7 @@ $con = obtenerConexion();
 try{
     // preparar y vincular parámetros
 
-    $stmt = $con->prepare("INSERT INTO horarios (horario, auladiurno1, auladiurno2, auladiurno3, auladiurno4, auladiurno5, auladiurno6, grupodiurno1, grupodiurno2, grupodiurno3, grupodiurno4,grupodiurno5, grupodiurno6, aulanocturno1, aulanocturno2, aulanocturno3, aulanocturno4, aulanocturno5, aulanocturno6, gruponocturno1, gruponocturno2,gruponocturno3,gruponocturno4,gruponocturno5,gruponocturno6) VALUES (:auladiurno1, :auladiurno2, :auladiurno3, :auladiurno4, :auladiurno5, :auladiurno6, :grupodiurno1, :grupodiurno2, :grupodiurno3, :grupodiurno4,:grupodiurno5, :grupodiurno6, :aulanocturno1, :aulanocturno2, :aulanocturno3, :aulanocturno4, :aulanocturno5, :aulanocturno6, :gruponocturno1, :gruponocturno2, :gruponocturno3, :gruponocturno4, :gruponocturno5, :gruponocturno6)");
+    $stmt = $con->prepare("INSERT INTO horarios (horario, auladiurno1, auladiurno2, auladiurno3, auladiurno4, auladiurno5, auladiurno6, grupodiurno1, grupodiurno2, grupodiurno3, grupodiurno4,grupodiurno5, grupodiurno6, aulanocturno1, aulanocturno2, aulanocturno3, aulanocturno4, aulanocturno5, aulanocturno6, gruponocturno1, gruponocturno2,gruponocturno3,gruponocturno4,gruponocturno5,gruponocturno6) VALUES (:horario ,:auladiurno1, :auladiurno2, :auladiurno3, :auladiurno4, :auladiurno5, :auladiurno6, :grupodiurno1, :grupodiurno2, :grupodiurno3, :grupodiurno4,:grupodiurno5, :grupodiurno6, :aulanocturno1, :aulanocturno2, :aulanocturno3, :aulanocturno4, :aulanocturno5, :aulanocturno6, :gruponocturno1, :gruponocturno2, :gruponocturno3, :gruponocturno4, :gruponocturno5, :gruponocturno6)");
 
 
     $stmt->bindParam(':horario', $idPermiso);
@@ -42,12 +42,12 @@ try{
     $stmt->bindParam(':aulanocturno5', $aulanocturno5);
     $stmt->bindParam(':aulanocturno6', $aulanocturno6);
 
-    $stmt->bindParam(':grupodiurno1', $gruponocturno1);
-    $stmt->bindParam(':grupodiurno2', $gruponocturno2);
-    $stmt->bindParam(':grupodiurno3', $gruponocturno3);
-    $stmt->bindParam(':grupodiurno4', $gruponocturno4);
-    $stmt->bindParam(':grupodiurno5', $gruponocturno5);
-    $stmt->bindParam(':grupodiurno6', $gruponocturno6);
+    $stmt->bindParam(':gruponocturno1', $gruponocturno1);
+    $stmt->bindParam(':gruponocturno2', $gruponocturno2);
+    $stmt->bindParam(':gruponocturno3', $gruponocturno3);
+    $stmt->bindParam(':gruponocturno4', $gruponocturno4);
+    $stmt->bindParam(':gruponocturno5', $gruponocturno5);
+    $stmt->bindParam(':gruponocturno6', $gruponocturno6);
 
 
 

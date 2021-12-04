@@ -105,6 +105,8 @@ if (isset($_POST['fecha'])) {
 $fecha = $_POST['fecha'];
 }
 
+
+
 if (isset($_POST['auladiurno1'])) {
     $auladiurno1 = $_POST['auladiurno1'];
     }
@@ -131,11 +133,11 @@ if (isset($_POST['auladiurno6'])) {
 
 
 
-            if (isset($_POST['aulanocturno1'])) {
-                $aulanocturno1 = $_POST['aulanocturno1'];
-                }
+if (isset($_POST['aulanocturno1'])) {
+            $aulanocturno1 = $_POST['aulanocturno1'];
+         }
             
-            if (isset($_POST['aulanocturno2'])) {
+if (isset($_POST['aulanocturno2'])) {
                 $aulanocturno2 = $_POST['aulanocturno2'];
                 }
             
