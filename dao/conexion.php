@@ -16,6 +16,7 @@ function obtenerConexion(){
 
     try {
 
+        
     
         $con = new PDO("mysql:host=".SERVIDOR.";dbname=".BBDD, USUARIO, CLAVE);
         
@@ -26,7 +27,7 @@ function obtenerConexion(){
         } catch(PDOException $e) {
         
             echo "Error: " . $e->getMessage();
-        
+            
         }
 
         return $con;
